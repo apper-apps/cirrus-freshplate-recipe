@@ -24,12 +24,11 @@
   
   .btn-secondary {
     @apply bg-surface text-gray-700 px-6 py-3 rounded-lg font-medium border transition-all duration-200 hover:bg-gray-50 hover:scale-105 active:scale-95;
-  }
+}
   
   .card {
-    @apply bg-white rounded-xl shadow-card transition-all duration-250 hover:shadow-card-hover hover:scale-102;
+    @apply bg-white rounded-xl shadow-card transition-all duration-200 hover:shadow-card-hover hover:scale-105;
   }
-  
   .recipe-card {
     @apply card overflow-hidden group cursor-pointer;
   }
