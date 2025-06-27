@@ -1,0 +1,69 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+  
+  html {
+    @apply h-full;
+  }
+  
+  body {
+    @apply h-full bg-background text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-primary/90 hover:scale-105 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-gray-700 px-6 py-3 rounded-lg font-medium border transition-all duration-200 hover:bg-gray-50 hover:scale-105 active:scale-95;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-card transition-all duration-250 hover:shadow-card-hover hover:scale-102;
+  }
+  
+  .recipe-card {
+    @apply card overflow-hidden group cursor-pointer;
+  }
+  
+  .recipe-card-image {
+    @apply aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-300;
+  }
+}
+
+/* Toast Customization */
+.Toastify__toast-container {
+  @apply z-50;
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-lg text-sm font-medium;
+}
+
+.Toastify__toast--success {
+  @apply bg-success text-white;
+}
+
+.Toastify__toast--error {
+  @apply bg-error text-white;
+}
+
+.Toastify__toast--info {
+  @apply bg-info text-white;
+}
+
+.Toastify__toast--warning {
+  @apply bg-warning text-white;
+}
+
+.Toastify__progress-bar {
+  @apply bg-white/30;
+}
