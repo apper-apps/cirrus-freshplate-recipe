@@ -27,13 +27,14 @@
 }
   
   .card {
-    @apply bg-white rounded-xl shadow-card transition-all duration-200 hover:shadow-card-hover hover:scale-105;
-  }
-  .recipe-card {
-    @apply card overflow-hidden group cursor-pointer;
-  }
-  
-  .recipe-card-image {
+}
+
+.recipe-card {
+  @apply card overflow-hidden cursor-pointer;
+  /* Note: 'group' utility must be applied directly to HTML elements, not through @apply */
+}
+
+.recipe-card-image {
     @apply aspect-video w-full object-cover group-hover:scale-105 transition-transform duration-300;
   }
 }
