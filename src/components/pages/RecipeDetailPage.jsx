@@ -259,7 +259,99 @@ const RecipeDetailPage = () => {
                     Ingredients not available for this recipe.
                   </p>
                 )}
-              </div>
+</div>
+            </motion.div>
+
+            {/* Nutritional Information */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="bg-white rounded-xl p-6 shadow-sm mt-6"
+            >
+              <h2 className="font-display font-bold text-xl text-gray-900 mb-6">
+                Nutritional Information
+              </h2>
+              {recipe.nutrition ? (
+                <div className="space-y-6">
+                  {/* Calories */}
+                  <div className="text-center p-4 bg-primary/5 rounded-lg">
+                    <div className="text-3xl font-bold text-primary">
+                      {recipe.nutrition.calories}
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      calories per serving
+                    </div>
+                  </div>
+
+                  {/* Macronutrients */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center">
+                        <ApperIcon name="Zap" className="w-4 h-4 text-primary mr-2" />
+                        <span className="text-gray-700 font-medium">Protein</span>
+                      </div>
+                      <span className="font-semibold text-gray-900">
+                        {recipe.nutrition.protein}g
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center">
+                        <ApperIcon name="Wheat" className="w-4 h-4 text-warning mr-2" />
+                        <span className="text-gray-700 font-medium">Carbs</span>
+                      </div>
+                      <span className="font-semibold text-gray-900">
+                        {recipe.nutrition.carbohydrates}g
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center">
+                        <ApperIcon name="Droplet" className="w-4 h-4 text-accent mr-2" />
+                        <span className="text-gray-700 font-medium">Fat</span>
+                      </div>
+                      <span className="font-semibold text-gray-900">
+                        {recipe.nutrition.fat}g
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center">
+                        <ApperIcon name="Leaf" className="w-4 h-4 text-success mr-2" />
+                        <span className="text-gray-700 font-medium">Fiber</span>
+                      </div>
+                      <span className="font-semibold text-gray-900">
+                        {recipe.nutrition.fiber}g
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Vitamins & Minerals */}
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-3">Vitamins & Minerals</h3>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700">Vitamin A</span>
+                        <span className="text-gray-600">{recipe.nutrition.vitamins.vitaminA} IU</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700">Vitamin C</span>
+                        <span className="text-gray-600">{recipe.nutrition.vitamins.vitaminC} mg</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700">Calcium</span>
+                        <span className="text-gray-600">{recipe.nutrition.vitamins.calcium} mg</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700">Iron</span>
+                        <span className="text-gray-600">{recipe.nutrition.vitamins.iron} mg</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <p className="text-gray-500 italic">
+                  Nutritional information not available for this recipe.
+                </p>
+              )}
             </motion.div>
           </div>
         </div>

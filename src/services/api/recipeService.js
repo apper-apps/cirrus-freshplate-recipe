@@ -31,7 +31,22 @@ const mockRecipes = [
       "Stir in chocolate chips",
       "Drop rounded tablespoons onto ungreased cookie sheets",
       "Bake 9-11 minutes until golden brown"
-    ]
+    ],
+    nutrition: {
+      calories: 142,
+      protein: 2.1,
+      carbohydrates: 20.5,
+      fat: 6.2,
+      fiber: 0.8,
+      sugar: 12.3,
+      sodium: 95,
+      vitamins: {
+        vitaminA: 98,
+        vitaminC: 0.2,
+        calcium: 18,
+        iron: 1.1
+      }
+    }
   },
   {
     Id: 2,
@@ -65,7 +80,22 @@ const mockRecipes = [
       "Add dressing and toss",
       "Top with feta and olives",
       "Serve chilled"
-    ]
+    ],
+    nutrition: {
+      calories: 385,
+      protein: 12.8,
+      carbohydrates: 45.2,
+      fat: 18.5,
+      fiber: 6.4,
+      sugar: 8.7,
+      sodium: 520,
+      vitamins: {
+        vitaminA: 856,
+        vitaminC: 24.8,
+        calcium: 185,
+        iron: 3.2
+      }
+    }
   },
   {
     Id: 3,
@@ -97,7 +127,22 @@ const mockRecipes = [
       "Add sauces and sugar",
       "Stir in basil leaves until wilted",
       "Serve immediately over rice"
-    ]
+    ],
+    nutrition: {
+      calories: 295,
+      protein: 26.4,
+      carbohydrates: 8.3,
+      fat: 17.2,
+      fiber: 2.1,
+      sugar: 5.8,
+      sodium: 890,
+      vitamins: {
+        vitaminA: 1240,
+        vitaminC: 89.6,
+        calcium: 45,
+        iron: 2.8
+      }
+    }
   }
 ]
 
